@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Milan Map – Interactive map of attractions, transport & neighbourhoods | Introducing Milan</title>
+<meta name="description" content="Milan interactive map: top attractions, metro lines, neighbourhoods and transport. Find the Duomo, Castello Sforzesco, Navigli, Brera and all major.">>
+<meta name="keywords" content="milan map, milan city map, milan attractions map, milan metro map, milan tourist map, map milan italy">
+<meta name="author" content="Ivanka Garcia Mancebo"><meta name="article:modified_time" content="2026-06-01T00:00:00Z">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta property="og:title" content="Milan Map – Interactive map of attractions, transport & neighbourhoods | Introducing Milan"><meta property="og:description" content="Milan interactive map: top attractions, metro lines, neighbourhoods and transport. Find the Duomo, Castello Sforzesco, Navigli, Brera and all major.">>
+<meta property="og:image" content="https://www.civitatis.com/f/italia/milan/guia/milan-m.jpg">
+<meta property="og:type" content="article"><meta property="og:url" content="https://www.introducingmilan.com/map">
+<link rel="canonical" href="https://www.introducingmilan.com/map">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--pink:#ea0558;--pink-dark:#c4004a;--soft-pink:#fff0f3;--dark:#1a1a2e;--gray:#6b7280;--light:#f7f7f9;--white:#ffffff;--border:#e8e8ee;--text:#2e2e2e;--font:'Montserrat',Arial,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:var(--font);color:var(--text);background:var(--white);line-height:1.6}img{max-width:100%;display:block}a{color:inherit;text-decoration:none}
+.nav{background:var(--white);position:sticky;top:0;z-index:100;box-shadow:0 2px 8px rgba(0,0,0,.08)}.nav-top-bar{display:flex;align-items:center;padding:0 32px;height:52px;border-bottom:1px solid var(--border)}.nav-logo{display:flex;align-items:center;font-size:18px;font-weight:800;letter-spacing:-.02em}.nav-logo-civ{color:var(--pink)}.nav-logo-brand{color:var(--dark);margin-left:8px;font-weight:700}.nav-pink-bar{background:var(--pink)}.nav-pink-inner{display:flex;align-items:stretch}.nav-pink-static{background:var(--white);color:var(--dark);padding:0 24px;font-size:13px;font-weight:700;display:flex;align-items:center;border-right:1px solid var(--border);white-space:nowrap}.nav-pink-links{display:flex;align-items:stretch;overflow-x:auto;scrollbar-width:none}.nav-pink-links::-webkit-scrollbar{display:none}.nav-pink-link{color:rgba(255,255,255,.92);padding:0 20px;font-size:13px;font-weight:600;display:flex;align-items:center;white-space:nowrap;transition:background .15s;height:44px}.nav-pink-link:hover{background:rgba(0,0,0,.12)}.nav-pink-dot{color:rgba(255,255,255,.4);font-size:5px;display:flex;align-items:center}
+.hero{position:relative;height:280px;overflow:hidden}.hero-img{width:100%;height:100%;object-fit:cover;display:block;filter:brightness(1.05) saturate(1.1)}.hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,.1) 0%,rgba(0,0,0,.6) 100%)}.hero-content{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:36px 40px;max-width:860px;margin:0 auto;left:0;right:0}.breadcrumb{display:flex;align-items:center;gap:5px;font-size:11.5px;font-weight:600;color:rgba(255,255,255,.7);margin-bottom:10px;flex-wrap:wrap}.breadcrumb a{color:rgba(255,255,255,.7)}.breadcrumb a:hover{color:#fff}.breadcrumb-sep{color:rgba(255,255,255,.35)}.hero-title{font-size:clamp(26px,4.5vw,46px);font-weight:900;color:#fff;line-height:1.05;letter-spacing:-.03em;text-shadow:0 2px 16px rgba(0,0,0,.25)}.hero-subtitle{font-size:15px;color:rgba(255,255,255,.85);font-weight:500;margin-top:10px;line-height:1.5}
+.article-wrap{max-width:800px;margin:0 auto;padding:0 24px}.intro-block{padding:36px 0 0}.intro-lead{font-size:16px;font-weight:600;color:var(--dark);line-height:1.75;margin-bottom:16px}.article-meta{display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-size:12.5px;color:var(--gray);margin-bottom:28px;padding-bottom:20px;border-bottom:1px solid var(--border)}.article-meta strong{color:var(--dark)}
+.article-body h2{font-size:22px;font-weight:800;color:var(--dark);margin:40px 0 14px;line-height:1.2;padding-bottom:10px;border-bottom:2px solid var(--border)}.article-body h3{font-size:16px;font-weight:800;color:var(--dark);margin:22px 0 10px}.article-body p{font-size:14.5px;line-height:1.85;color:var(--text);margin-bottom:16px}.article-body p:last-child{margin-bottom:0}.article-body strong{font-weight:700;color:var(--dark)}.article-body a{color:var(--pink);font-weight:600}.article-body a:hover{text-decoration:underline}.article-body ul{margin:10px 0 16px;padding-left:0;list-style:none;display:flex;flex-direction:column;gap:8px}.article-body ul li{font-size:14.5px;color:var(--text);line-height:1.7;padding-left:18px;position:relative}.article-body ul li::before{content:'·';color:var(--pink);font-size:20px;font-weight:800;line-height:1;position:absolute;left:0;top:1px}
+.info-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:16px 0 28px}.info-card{background:var(--light);border:1.5px solid var(--border);border-radius:10px;padding:14px 16px;transition:border-color .15s}.info-card:hover{border-color:var(--pink)}.info-card-title{font-size:13px;font-weight:800;color:var(--dark);margin-bottom:5px}.info-card-body{font-size:12.5px;color:var(--gray);line-height:1.55}
+.tip-box{background:#fffbeb;border-left:4px solid #f59e0b;border-radius:0 10px 10px 0;padding:18px 22px;margin:28px 0}.tip-box-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.15em;color:#d97706;margin-bottom:8px}.tip-box p{font-size:14px;color:var(--text);margin:0;line-height:1.75}
+.inline-cta{background:var(--soft-pink);border-left:4px solid var(--pink);border-radius:0 10px 10px 0;padding:18px 22px;display:flex;align-items:center;justify-content:space-between;gap:16px;margin:32px 0;flex-wrap:wrap}.inline-cta-text{font-size:14px;font-weight:700;color:var(--dark)}.inline-cta-sub{font-size:12px;color:var(--gray);margin-top:3px}.inline-cta-btn{background:var(--pink);color:#ffffff!important;padding:10px 22px;border-radius:8px;font-size:13px;font-weight:700;white-space:nowrap;transition:background .15s;flex-shrink:0;text-decoration:none;display:inline-block}.inline-cta-btn:hover{background:var(--pink-dark)}
+.faq-section{background:var(--light);border-top:1px solid var(--border);padding:48px 0;margin-top:56px}.faq-inner{max-width:800px;margin:0 auto;padding:0 24px}.faq-title{font-size:20px;font-weight:800;color:var(--dark);margin-bottom:20px;padding-bottom:12px;border-bottom:2px solid var(--border)}.faq-list{display:flex;flex-direction:column;gap:10px}.faq-item{border:1.5px solid var(--border);border-radius:10px;overflow:hidden;background:var(--white)}.faq-q{padding:16px 20px;font-size:14px;font-weight:700;color:var(--dark);cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;transition:background .15s}.faq-q:hover{background:var(--soft-pink)}.faq-icon{width:22px;height:22px;border-radius:50%;background:var(--soft-pink);color:var(--pink);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:800;flex-shrink:0;transition:background .15s,transform .2s}.faq-item.open .faq-icon{background:var(--pink);color:#fff;transform:rotate(45deg)}.faq-a{max-height:0;overflow:hidden;padding:0 20px;font-size:13.5px;color:var(--gray);line-height:1.75;transition:max-height .3s,padding .3s}.faq-item.open .faq-a{max-height:250px;padding:0 20px 16px}
+.footer{background:var(--dark);padding:48px 0 28px}.footer-inner{max-width:1100px;margin:0 auto;padding:0 24px}.footer-top{display:grid;grid-template-columns:220px 1fr 1fr 1fr;gap:40px;margin-bottom:36px}.footer-brand{font-size:16px;font-weight:800;color:var(--pink);margin-bottom:8px}.footer-brand-desc{font-size:12.5px;color:rgba(255,255,255,.45);line-height:1.7}.footer-col-title{font-size:10.5px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:14px}.footer-links{display:flex;flex-direction:column;gap:8px}.footer-link{font-size:13px;color:rgba(255,255,255,.45);transition:color .15s}.footer-link:hover{color:#fff}.footer-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:20px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px}.footer-copy{font-size:12px;color:rgba(255,255,255,.3)}.footer-legal{display:flex;gap:16px;flex-wrap:wrap}.footer-legal a{font-size:12px;color:rgba(255,255,255,.35);transition:color .15s}.footer-legal a:hover{color:rgba(255,255,255,.7)}
+@media(max-width:700px){.hero{height:220px}.info-grid{grid-template-columns:1fr}.footer-top{grid-template-columns:1fr 1fr}}
+
+
+.article-body h2{font-size:22px;font-weight:800;color:var(--dark);margin:40px 0 14px;padding-bottom:10px;border-bottom:2px solid var(--border)}
+.article-body p{font-size:14.5px;line-height:1.85;color:var(--text);margin-bottom:16px}
+.article-body strong{font-weight:700;color:var(--dark)}
+.article-body a{color:var(--pink);font-weight:600}
+.article-body ul{margin:10px 0 16px;padding-left:0;list-style:none;display:flex;flex-direction:column;gap:8px}
+.article-body ul li{font-size:14.5px;color:var(--text);line-height:1.7;padding-left:18px;position:relative}
+.article-body ul li::before{content:"·";color:var(--pink);font-size:20px;font-weight:800;line-height:1;position:absolute;left:0;top:1px}
+.info-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:16px 0 28px}
+.info-card{background:var(--light);border:1.5px solid var(--border);border-radius:10px;padding:14px 16px}
+.info-card-title{font-size:13px;font-weight:800;color:var(--dark);margin-bottom:5px}
+.info-card-body{font-size:12.5px;color:var(--gray);line-height:1.55}
+.inline-cta{background:var(--soft-pink);border-left:4px solid var(--pink);border-radius:0 10px 10px 0;padding:18px 22px;display:flex;align-items:center;justify-content:space-between;gap:16px;margin:32px 0;flex-wrap:wrap}
+.inline-cta-text{font-size:14px;font-weight:700;color:var(--dark)}.inline-cta-sub{font-size:12px;color:var(--gray);margin-top:3px}
+.inline-cta-btn{background:var(--pink);color:#ffffff!important;padding:10px 22px;border-radius:8px;font-size:13px;font-weight:700;white-space:nowrap;transition:background .15s;flex-shrink:0;text-decoration:none;display:inline-block}
+.inline-cta-btn:hover{background:var(--pink-dark)}
+@media(max-width:600px){.info-grid{grid-template-columns:1fr}.hero{height:220px}.footer-top{grid-template-columns:1fr 1fr}}
+.keyfacts{background:var(--white);border:1.5px solid var(--border);border-radius:14px;overflow:hidden;margin:32px 0}
+.keyfacts-title{background:var(--dark);color:#fff;padding:12px 20px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.15em}
+.keyfacts table{width:100%;border-collapse:collapse}
+.keyfacts td{padding:10px 16px;border-bottom:1px solid var(--border);font-size:13.5px;color:var(--text)}
+.keyfacts td:first-child{font-weight:700;color:var(--dark);width:42%;background:var(--light)}
+.keyfacts tr:last-child td{border-bottom:none}
+</style>
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@civitatis">
+  <meta name="twitter:title" content="Milan Map – Interactive map of attractions & transport">
+  <meta name="twitter:description" content="Interactive map of Milan: top attractions, metro lines and neighbourhoods including Duomo, Brera, Castello and Navigli.">
+  <meta name="twitter:image" content="https://www.civitatis.com/f/italia/milan/guia/milan-m.jpg">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","speakable":{"@type":"SpeakableSpecification","cssSelector":[".hero-title",".hero-subtitle",".intro-lead","h2","h1"]},"url":"https://www.introducingmilan.com/map"}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the centre of Milan?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The geographical and symbolic centre of Milan is Piazza del Duomo \u2014 the square in front of the cathedral. From here, the Galleria Vittorio Emanuele II leads north to Piazza della Scala. The historic centre is compact \u2014 most major attractions are within a 20-minute walk of the Duomo."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Milan easy to navigate on foot?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes \u2014 Milan's historic centre is very walkable. The Duomo, Galleria, La Scala, Brera gallery and Castello Sforzesco are all within comfortable walking distance of each other. The metro is most useful for reaching the airports, the Navigli and outlying areas. Walking is generally faster than any transport mode within the centre itself."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which side of Milan is the Navigli?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Navigli canal district is in the south of Milan, roughly 2.5km south of the Duomo. It is accessible on foot in about 25 minutes from the Duomo, or by Metro M2 to Porta Genova (5 minutes from the Duomo station)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How far is Brera from the Duomo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Brera is approximately 800 metres north of the Duomo \u2014 about a 10\u201312 minute walk. The Pinacoteca di Brera is on Via Brera, easily reached on foot from the city centre."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<nav class="nav">
+  <div class="nav-top-bar"><a href="/" class="nav-logo"><span class="nav-logo-civ">civitatis</span><span class="nav-logo-brand">Milan</span></a></div>
+  <div class="nav-pink-bar"><div class="nav-pink-inner"><a href="/" class="nav-pink-static">Travel Guide</a><div class="nav-pink-links"><a href="https://www.civitatis.com/en/milan/?aid=804&guide_id=102" class="nav-pink-link" target="_blank" rel="noopener">Day trips and guided tours</a><span class="nav-pink-dot">●</span><a href="https://www.civitatis.com/en/milan/transfers/?aid=804&guide_id=102" class="nav-pink-link" target="_blank" rel="noopener">Airport transfers</a><span class="nav-pink-dot">●</span><a href="/hotels" class="nav-pink-link">Hotel deals</a></div></div></div>
+</nav>
+<header class="hero">
+  <img src="https://www.civitatis.com/f/italia/milan/guia/milan-m.jpg" alt="Milan Map" class="hero-img" loading="eager" fetchpriority="high">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <nav class="breadcrumb"><a href="/">Milan</a><span class="breadcrumb-sep">›</span><a href="/general-information">General Information</a><span class="breadcrumb-sep">›</span><span>Map of Milan</span></nav>
+    <h1 class="hero-title">Milan Map</h1>
+    <p class="hero-subtitle">Interactive map of Milan's top attractions, metro lines and neighbourhoods</p>
+  </div>
+</header>
+<div class="article-wrap">
+  <div class="intro-block" style="padding:36px 0 0">
+    <div class="article-meta" style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-size:12.5px;color:var(--gray);margin-bottom:28px;padding-bottom:20px;border-bottom:1px solid var(--border)"><span>✍️ By <strong style="color:var(--dark)">Ivanka Garcia Mancebo</strong></span><span>·</span><span>Updated <time datetime="2026-06-01">June 2026</time></span></div>
+  </div>
+  <div class="article-body">
+<h2>Milan interactive map</h2>
+<p>Use the embedded map below to explore Milan's main attractions, metro stations and neighbourhoods. You can search for specific addresses, plan routes and switch between map and satellite view.</p>
+<div style="border-radius:12px;overflow:hidden;border:1.5px solid var(--border);margin:16px 0 32px">
+  <iframe src="https://maps.google.com/maps?q=Milan,Italy&z=13&output=embed" width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy" title="Map of Milan"></iframe>
+  <a href="https://www.google.com/maps/place/Milan,+Italy" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:center;gap:8px;padding:11px;background:var(--white);font-size:13px;font-weight:700;color:var(--pink);">📍 Open in Google Maps</a>
+</div>
+<h2>Key areas on the map</h2>
+<div class="info-grid">
+<div class="info-card"><div class="info-card-title">⛪ Historic centre</div><div class="info-card-body">Duomo, Galleria Vittorio Emanuele II, La Scala, Piazza Mercanti — all within a few hundred metres of each other.</div></div>
+<div class="info-card"><div class="info-card-title">🎨 Brera / Montenapoleone</div><div class="info-card-body">Pinacoteca di Brera, Via Montenapoleone (fashion district), Museo Poldi Pezzoli — north of the Duomo.</div></div>
+<div class="info-card"><div class="info-card-title">🏰 Castello area</div><div class="info-card-body">Castello Sforzesco, Parco Sempione, Triennale di Milano, The Last Supper (Santa Maria delle Grazie) — northwest of the centre.</div></div>
+<div class="info-card"><div class="info-card-title">🚢 Navigli</div><div class="info-card-body">Milan's canal district — south of the centre, accessible by M2 (Porta Genova) or tram 9/19. Best for evening dining and aperitivo.</div></div>
+</div>
+<h2>Transport links</h2>
+<p>For the metro map, see our <a href="/metro">Milan Metro guide</a>. For all transport options, see the <a href="/transport">Transport overview</a>. To get from the airports to the city centre, see our <a href="/how-to-get-to-milan">How to get to Milan</a> guide.</p>
+
+<h2>Milan's neighbourhoods at a glance</h2>
+<p>Milan's historic centre is compact and largely walkable. The <strong>Duomo</strong> is the geographical and psychological centre of the city — from here, the main neighbourhoods radiate outward. Understanding their character helps with navigation and with choosing where to stay and eat.</p>
+<p><strong>Centro Storico</strong> (Duomo area): the most tourist-heavy zone, with the cathedral, Galleria and La Scala all within a few hundred metres. Most expensive for hotels and restaurants; most convenient for first-time visitors.</p>
+<p><strong>Brera</strong>: immediately north of the centre. Elegant, cobblestoned neighbourhood with the Pinacoteca di Brera, boutiques and excellent restaurants. The most atmospheric area for an evening out.</p>
+<p><strong>Castello / Sempione</strong>: northwest of the centre. Dominated by the Sforza castle and Parco Sempione. Also the neighbourhood of the Last Supper (Santa Maria delle Grazie) and the Triennale design museum.</p>
+<p><strong>Navigli</strong>: south of the centre. Canal district — Milan's most lively area for aperitivo, evening dining and nightlife. Accessible by M2 (Porta Genova).</p>
+<p><strong>Porta Venezia / Buenos Aires</strong>: east of the centre. Multicultural neighbourhood with Corso Buenos Aires shopping, the Giardini Pubblici and the GAM museum. Good value for hotels; connected to Linate Airport by M4.</p>
+<p><strong>Porta Nuova / Isola</strong>: north of the centre. The modern Milan — Piazza Gae Aulenti skyscraper district and the trendy Isola neighbourhood. Accessible by M2 or M5 (Garibaldi).</p>
+<p><strong>Porta Romana / Porta Ticinese</strong>: south and southeast. Less touristy, more local — good for authentic neighbourhood restaurants. Close to the Navigli area.</p>
+
+<h2>Distances from key points</h2>
+<p>The Milan city centre is <strong>compact by major European city standards</strong>. From the Duomo: Castello Sforzesco is a 20-minute walk west; the Pinacoteca di Brera is 15 minutes north; the Navigli is 25 minutes south on foot or 10 minutes by M2. The Last Supper at Santa Maria delle Grazie is 25 minutes west by foot or a short metro+walk combination.</p>
+
+<h2>Getting around with a map</h2>
+<p>The <strong>Metro map</strong> is the most useful navigational tool — see our <a href="/metro">Milan Metro guide</a> for the full five-line network. For walking, the <strong>historic centre fits within a roughly 2km radius</strong> from the Duomo — surprisingly manageable on foot. The main thing that catches visitors off guard is that Milan's street grid is not rectangular but radial — streets fan out from the centre in all directions, which means that east-west and north-south movement sometimes requires diagonal routes.</p>
+<div class="keyfacts"><div class="keyfacts-title">Key Facts</div><table><tr><td>City centre landmark</td><td>Piazza del Duomo</td></tr><tr><td>Duomo → Castello Sforzesco</td><td>~20 min walk (1.5km west)</td></tr><tr><td>Duomo → Brera gallery</td><td>~12 min walk (800m north)</td></tr><tr><td>Duomo → Navigli</td><td>~25 min walk or M2 Porta Genova</td></tr><tr><td>Duomo → Last Supper</td><td>~25 min walk or M1+walk</td></tr><tr><td>Duomo → Porta Nuova</td><td>~20 min walk or M2 Garibaldi</td></tr><tr><td>Metro lines</td><td>5 lines (M1–M5) · 113 stations</td></tr><tr><td>Airport (closest)</td><td>Linate (LIN) · 8km · M4 15 min</td></tr></table></div>
+  </div>
+</div>
+<section style="background:var(--light);border-top:1px solid var(--border);padding:40px 0;margin-top:40px">
+  <div style="max-width:800px;margin:0 auto;padding:0 24px">
+    <h2 style="font-size:20px;font-weight:800;color:var(--dark);margin-bottom:20px;padding-bottom:12px;border-bottom:2px solid var(--border)">Frequently asked questions</h2>
+    <div class="faq-list">
+<div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)" role="button" tabindex="0"><span>What is the centre of Milan?</span><span class="faq-icon">+</span></div><div class="faq-a"><p>The geographical and symbolic centre of Milan is Piazza del Duomo — the square in front of the cathedral. From here, the Galleria Vittorio Emanuele II leads north to Piazza della Scala. The historic centre is compact — most major attractions are within a 20-minute walk of the Duomo.</p></div></div>
+<div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)" role="button" tabindex="0"><span>Is Milan easy to navigate on foot?</span><span class="faq-icon">+</span></div><div class="faq-a"><p>Yes — Milan's historic centre is very walkable. The Duomo, Galleria, La Scala, Brera gallery and Castello Sforzesco are all within comfortable walking distance of each other. The metro is most useful for reaching the airports, the Navigli and outlying areas. Walking is generally faster than any transport mode within the centre itself.</p></div></div>
+<div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)" role="button" tabindex="0"><span>Which side of Milan is the Navigli?</span><span class="faq-icon">+</span></div><div class="faq-a"><p>The Navigli canal district is in the south of Milan, roughly 2.5km south of the Duomo. It is accessible on foot in about 25 minutes from the Duomo, or by Metro M2 to Porta Genova (5 minutes from the Duomo station).</p></div></div>
+<div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)" role="button" tabindex="0"><span>How far is Brera from the Duomo?</span><span class="faq-icon">+</span></div><div class="faq-a"><p>Brera is approximately 800 metres north of the Duomo — about a 10–12 minute walk. The Pinacoteca di Brera is on Via Brera, easily reached on foot from the city centre.</p></div></div>
+</div>
+  </div>
+</section>
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div><div class="footer-brand">civitatis · Milan</div><p class="footer-brand-desc">A travel guide to Milan by Civitatis experts.</p></div>
+      <div><div class="footer-col-title">General Information</div><div class="footer-links"><a href="/general-information" class="footer-link">Overview</a><a href="/travel-advice" class="footer-link">Travel Advice</a><a href="/opening-times" class="footer-link">Opening Times</a><a href="/language" class="footer-link">Language</a><a href="/climate" class="footer-link">Climate</a><a href="/public-holidays" class="footer-link">Public Holidays</a></div></div>
+      <div><div class="footer-col-title">Plan Your Visit</div><div class="footer-links"><a href="/two-days-in-milan" class="footer-link">Two Days in Milan</a><a href="/where-to-stay" class="footer-link">Where to Stay</a><a href="/where-to-eat" class="footer-link">Where to Eat</a><a href="/transport" class="footer-link">Transport</a></div></div>
+      <div><div class="footer-col-title">Book</div><div class="footer-links"><a href="https://www.civitatis.com/en/milan/?aid=804&guide_id=102" class="footer-link" target="_blank" rel="noopener">Tours & Activities</a><a href="https://www.civitatis.com/en/milan/transfers/?aid=804&guide_id=102" class="footer-link" target="_blank" rel="noopener">Airport Transfers</a><a href="/hotels" class="footer-link">Hotels</a></div></div>
+    </div>
+    <div class="footer-bottom"><span class="footer-copy">© 2026 Civitatis · Introducing Milan</span><div class="footer-legal"><a href="https://www.civitatis.com/en/general-conditions/" target="_blank" rel="noopener">General Conditions</a><a href="https://www.civitatis.com/en/legal/" target="_blank" rel="noopener">Legal Notice</a><a href="/privacy/">Privacy Policy</a><a href="https://www.civitatis.com/en/cookies/" target="_blank" rel="noopener">Cookies</a></div></div>
+  </div>
+</footer>
+</body>
+</html>
