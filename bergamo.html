@@ -49,7 +49,42 @@
 <style>
 :root{--pink:#ea0558;--pink-dark:#c4004a;--soft-pink:#fff0f3;--dark:#1a1a2e;--gray:#6b7280;--light:#f7f7f9;--white:#ffffff;--border:#e8e8ee;--text:#2e2e2e;--font:'Montserrat',Arial,sans-serif}
 *{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:var(--font);color:var(--text);background:var(--white);line-height:1.6}img{max-width:100%;display:block}a{color:inherit;text-decoration:none}
-.nav{background:var(--white);position:sticky;top:0;z-index:100;box-shadow:0 2px 8px rgba(0,0,0,.08)}.nav-top-bar{display:flex;align-items:center;padding:0 32px;height:52px;border-bottom:1px solid var(--border)}.nav-logo{display:flex;align-items:center;font-size:18px;font-weight:800;letter-spacing:-.02em}.nav-logo-civ{color:var(--pink)}.nav-logo-brand{color:var(--dark);margin-left:8px;font-weight:700}.nav-pink-bar{background:var(--pink)}.nav-pink-inner{display:flex;align-items:stretch}.nav-pink-static{background:var(--white);color:var(--dark);padding:0 24px;font-size:13px;font-weight:700;display:flex;align-items:center;border-right:1px solid var(--border);white-space:nowrap}.nav-pink-links{display:flex;align-items:stretch;overflow-x:auto;scrollbar-width:none}.nav-pink-links::-webkit-scrollbar{display:none}.nav-pink-link{color:rgba(255,255,255,.92);padding:0 20px;font-size:13px;font-weight:600;display:flex;align-items:center;white-space:nowrap;transition:background .15s;height:44px}.nav-pink-link:hover{background:rgba(0,0,0,.12)}.nav-pink-dot{color:rgba(255,255,255,.4);font-size:5px;display:flex;align-items:center}
+/* ===== DROPDOWN NAV ===== */
+.nav{background:var(--white);position:sticky;top:0;z-index:100;box-shadow:0 2px 8px rgba(0,0,0,.08)}
+.nav-top-bar{display:flex;align-items:center;justify-content:space-between;padding:0 32px;height:52px;border-bottom:1px solid var(--border)}
+.nav-logo{display:flex;align-items:center;font-family:"Montserrat",Arial,sans-serif;text-decoration:none;line-height:1}
+.nav-logo-civ{color:var(--pink);font-size:20px;font-weight:600;letter-spacing:.01em}
+.nav-logo-brand{color:var(--dark);font-size:20px;font-weight:700;margin-left:7px;letter-spacing:.01em}
+.nav-lang{font-size:13px;color:var(--gray);font-weight:600}
+.nav-main{border-bottom:1px solid var(--border)}
+.nav-main-inner{display:flex;align-items:stretch;padding:0 24px;overflow-x:auto;scrollbar-width:none;background:var(--white)}
+.nav-main-inner::-webkit-scrollbar{display:none}
+.nav-main-link{font-size:13px;font-weight:700;color:var(--dark);padding:0 16px;height:44px;display:flex;align-items:center;white-space:nowrap;text-decoration:none;border-bottom:3px solid transparent;transition:color .15s,border-color .15s;gap:4px}
+.nav-main-link:hover{color:var(--pink);border-bottom-color:var(--pink)}
+.nav-main-static{color:var(--dark);border-right:1px solid var(--border);margin-right:4px;border-bottom:3px solid var(--pink)}
+.nav-arrow{font-size:10px;color:var(--gray)}
+
+/* Dropdown */
+.nav-dropdown{position:relative}
+.nav-dropdown:hover .nav-sub{display:block}
+.nav-sub{display:none;position:absolute;top:100%;left:0;background:var(--white);border:1.5px solid var(--border);border-radius:0 0 10px 10px;min-width:220px;box-shadow:0 8px 24px rgba(0,0,0,.1);z-index:200;padding:8px 0}
+.nav-sub a{display:block;padding:9px 18px;font-size:13px;font-weight:600;color:var(--dark);text-decoration:none;transition:background .1s,color .1s;white-space:nowrap}
+.nav-sub a:first-child{font-weight:800;color:var(--pink);border-bottom:1px solid var(--border);margin-bottom:4px}
+.nav-sub a:hover{background:var(--soft-pink);color:var(--pink)}
+
+/* Pink links bar */
+.nav-pink-links-bar{background:var(--pink);display:flex;align-items:center;padding:0 24px;height:40px;gap:0;overflow-x:auto;scrollbar-width:none}
+.nav-pink-links-bar::-webkit-scrollbar{display:none}
+.nav-pink-links-bar a{color:rgba(255,255,255,.92);font-size:13px;font-weight:600;text-decoration:none;white-space:nowrap;padding:0 16px;height:40px;display:flex;align-items:center;transition:background .15s}
+.nav-pink-links-bar a:hover{background:rgba(0,0,0,.12)}
+.nav-pink-links-bar span{color:rgba(255,255,255,.4);font-size:5px}
+
+@media(max-width:768px){
+  .nav-top-bar{padding:0 16px}
+  .nav-main-inner{padding:0 8px}
+  .nav-main-link{padding:0 10px;font-size:12px}
+  .nav-sub{min-width:180px}
+}
 .hero{position:relative;height:380px;overflow:hidden}.hero-img{width:100%;height:100%;object-fit:cover;display:block;filter:brightness(1.05) saturate(1.15)}.hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,.05) 0%,rgba(0,0,0,.55) 100%)}.hero-content{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:36px 40px;max-width:860px;margin:0 auto;left:0;right:0}.breadcrumb{display:flex;align-items:center;gap:5px;font-size:11.5px;font-weight:600;color:rgba(255,255,255,.7);margin-bottom:10px;flex-wrap:wrap}.breadcrumb a{color:rgba(255,255,255,.7)}.breadcrumb a:hover{color:#fff}.breadcrumb-sep{color:rgba(255,255,255,.35)}.hero-title{font-size:clamp(34px,5.5vw,56px);font-weight:900;color:#fff;line-height:1.0;letter-spacing:-.03em;text-shadow:0 2px 18px rgba(0,0,0,.25)}.hero-subtitle{font-size:15px;color:rgba(255,255,255,.85);font-weight:500;margin-top:10px;max-width:560px;line-height:1.5}
 .article-wrap{max-width:800px;margin:0 auto;padding:0 24px}.intro-block{padding:36px 0 0}.intro-lead{font-size:16px;font-weight:600;color:var(--dark);line-height:1.75;margin-bottom:16px}.article-meta{display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-size:12.5px;color:var(--gray);margin-bottom:28px;padding-bottom:20px;border-bottom:1px solid var(--border)}.article-meta strong{color:var(--dark)}
 .article-body h2{font-size:22px;font-weight:800;color:var(--dark);margin:40px 0 14px;line-height:1.2;padding-bottom:10px;border-bottom:2px solid var(--border)}.article-body p{font-size:14.5px;line-height:1.85;color:var(--text);margin-bottom:16px}.article-body p:last-child{margin-bottom:0}.article-body strong{font-weight:700;color:var(--dark)}.article-body a{color:var(--pink);font-weight:600}.article-body a:hover{text-decoration:underline}.article-body ul{margin:10px 0 16px 0;padding-left:0;list-style:none;display:flex;flex-direction:column;gap:8px}.article-body ul li{font-size:14.5px;color:var(--text);line-height:1.7;padding-left:18px;position:relative}.article-body ul li::before{content:'·';color:var(--pink);font-size:20px;font-weight:800;line-height:1;position:absolute;left:0;top:1px}
@@ -79,8 +114,93 @@
 </head>
 <body>
 <nav class="nav">
-  <div class="nav-top-bar"><a href="/introducingmilan/index.html" class="nav-logo"><span class="nav-logo-civ">civitatis</span><span class="nav-logo-brand">Milan</span></a></div>
-  <div class="nav-pink-bar"><div class="nav-pink-inner"><a href="/introducingmilan/index.html" class="nav-pink-static">Travel Guide</a><div class="nav-pink-links"><a href="https://www.civitatis.com/en/milan/?aid=804&guide_id=102" class="nav-pink-link" target="_blank" rel="noopener">Day trips and guided tours</a><span class="nav-pink-dot">●</span><a href="https://www.civitatis.com/en/milan/transfers/?aid=804&guide_id=102" class="nav-pink-link" target="_blank" rel="noopener">Airport transfers</a><span class="nav-pink-dot">●</span><a href="https://www.introducingmilan.com/hotels" class="nav-pink-link">Hotel deals</a><span class="nav-pink-dot">●</span><a href="https://www.introducingmilan.com/cars" class="nav-pink-link">Car rentals</a><span class="nav-pink-dot">●</span><a href="https://www.introducingmilan.com/flights" class="nav-pink-link">Flights</a></div></div></div>
+  <div class="nav-top-bar">
+    <a href="/introducingmilan/index.html" class="nav-logo"><span class="nav-logo-civ">civitatis</span><span class="nav-logo-brand">Milan</span></a>
+    <div class="nav-lang">English</div>
+  </div>
+  <div class="nav-main">
+    <div class="nav-main-inner">
+      <a href="/introducingmilan/index.html" class="nav-main-link nav-main-static">Travel Guide</a>
+
+      <div class="nav-dropdown">
+        <a href="/introducingmilan/general-information.html" class="nav-main-link">General Information <span class="nav-arrow">▾</span></a>
+        <div class="nav-sub">
+          <a href="/introducingmilan/general-information.html">General Information</a>
+          <a href="/introducingmilan/plan-your-trip.html">Plan Your Trip</a>
+          <a href="/introducingmilan/travel-advice.html">Travel Advice</a>
+          <a href="/introducingmilan/travel-insurance.html">Travel Insurance</a>
+          <a href="/introducingmilan/opening-times.html">Opening Times</a>
+          <a href="/introducingmilan/language.html">Language</a>
+          <a href="/introducingmilan/climate.html">Climate</a>
+          <a href="/introducingmilan/public-holidays.html">Public Holidays</a>
+          <a href="/introducingmilan/prices.html">Prices</a>
+          <a href="/introducingmilan/history.html">History</a>
+          <a href="/introducingmilan/two-days-in-milan.html">Two Days in Milan</a>
+          <a href="/introducingmilan/map.html">Map</a>
+        </div>
+      </div>
+
+      <div class="nav-dropdown">
+        <a href="/introducingmilan/top-attractions.html" class="nav-main-link">Top Attractions <span class="nav-arrow">▾</span></a>
+        <div class="nav-sub">
+          <a href="/introducingmilan/top-attractions.html">Top Attractions</a>
+          <a href="/introducingmilan/top-10.html">Top 10</a>
+          <a href="/introducingmilan/monuments-attractions.html">Monuments & Attractions</a>
+          <a href="/introducingmilan/milan-cathedral.html">Milan Cathedral</a>
+          <a href="/introducingmilan/the-last-supper.html">The Last Supper</a>
+          <a href="/introducingmilan/galleria-vittorio-emanuele-ii.html">Galleria Vittorio Emanuele II</a>
+          <a href="/introducingmilan/teatro-alla-scala.html">Teatro alla Scala</a>
+          <a href="/introducingmilan/castello-sforzesco.html">Castello Sforzesco</a>
+          <a href="/introducingmilan/museums.html">Museums</a>
+          <a href="/introducingmilan/pinacoteca-di-brera.html">Pinacoteca di Brera</a>
+          <a href="/introducingmilan/pinacoteca-ambrosiana.html">Pinacoteca Ambrosiana</a>
+          <a href="/introducingmilan/day-trips.html">Day Trips</a>
+          <a href="/introducingmilan/lake-como.html">Lake Como</a>
+          <a href="/introducingmilan/lake-maggiore.html">Lake Maggiore</a>
+          <a href="/introducingmilan/bergamo.html">Bergamo</a>
+        </div>
+      </div>
+
+      <div class="nav-dropdown">
+        <a href="/introducingmilan/how-to-get-to-milan.html" class="nav-main-link">How to Get to Milan <span class="nav-arrow">▾</span></a>
+        <div class="nav-sub">
+          <a href="/introducingmilan/how-to-get-to-milan.html">How to Get to Milan</a>
+          <a href="/introducingmilan/milan-malpensa-airport.html">Malpensa Airport</a>
+          <a href="/introducingmilan/milan-linate-airport.html">Linate Airport</a>
+          <a href="/introducingmilan/bergamo-airport.html">Bergamo Airport</a>
+        </div>
+      </div>
+
+      <div class="nav-dropdown">
+        <a href="/introducingmilan/transport.html" class="nav-main-link">Transport <span class="nav-arrow">▾</span></a>
+        <div class="nav-sub">
+          <a href="/introducingmilan/transport.html">Transport Overview</a>
+          <a href="/introducingmilan/metro.html">Metro</a>
+          <a href="/introducingmilan/tram.html">Tram</a>
+          <a href="/introducingmilan/bus.html">Bus</a>
+          <a href="/introducingmilan/taxis.html">Taxis</a>
+          <a href="/introducingmilan/sightseeing-bus.html">Sightseeing Bus</a>
+          <a href="/introducingmilan/tickets-and-travel-cards.html">Tickets & Travel Cards</a>
+        </div>
+      </div>
+
+      <a href="/introducingmilan/shopping.html" class="nav-main-link">Shopping</a>
+      <a href="/introducingmilan/where-to-eat.html" class="nav-main-link">Where to Eat</a>
+      <a href="/introducingmilan/where-to-stay.html" class="nav-main-link">Where to Stay</a>
+    </div>
+
+    <div class="nav-pink-links-bar">
+      <a href="https://www.civitatis.com/en/milan/?aid=804&guide_id=102" target="_blank" rel="noopener">Day trips and guided tours</a>
+      <span>·</span>
+      <a href="https://www.civitatis.com/en/milan/transfers/?aid=804&guide_id=102" target="_blank" rel="noopener">Airport transfers</a>
+      <span>·</span>
+      <a href="https://www.introducingmilan.com/hotels">Hotel deals</a>
+      <span>·</span>
+      <a href="https://www.introducingmilan.com/cars">Car rentals</a>
+      <span>·</span>
+      <a href="https://www.introducingmilan.com/flights">Flights</a>
+    </div>
+  </div>
 </nav>
 
 <header class="hero">
