@@ -322,5 +322,6 @@
     <div class="footer-bottom"><span class="footer-copy">© 2026 Civitatis · Introducing Milan</span><div class="footer-legal"><a href="https://www.civitatis.com/en/general-conditions/" target="_blank" rel="noopener">General Conditions</a><a href="https://www.civitatis.com/en/legal/" target="_blank" rel="noopener">Legal Notice</a><a href="https://www.introducingmilan.com/privacy">Privacy Policy</a><a href="https://www.civitatis.com/en/cookies/" target="_blank" rel="noopener">Cookies</a></div></div>
   </div>
 </footer>
+<script>function toggleFaq(el){const item=el.closest(".faq-item");const isOpen=item.classList.contains("open");document.querySelectorAll(".faq-item.open").forEach(i=>i.classList.remove("open"));if(!isOpen)item.classList.add("open")}document.querySelectorAll(".faq-q").forEach(btn=>{btn.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();toggleFaq(btn)}})});</script>
 </body>
 </html>
